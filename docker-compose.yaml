@@ -1,9 +1,9 @@
 version: "3"
 services:
-#  ryanair-automation:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
+  ryanair-automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
   selenium-chrome:
     image: selenium/standalone-chrome:3.141.59-20200525
     container_name: selenium-chrome

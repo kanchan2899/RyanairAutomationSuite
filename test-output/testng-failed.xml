@@ -5,10 +5,14 @@
     <classes>
       <class name="com.ryanair.tests.HomePageTest">
         <methods>
+          <include name="searchFlights"/>
           <include name="tearDown"/>
+          <include name="validateHomePageIsLoaded"/>
           <include name="navigateToFlights"/>
           <include name="setUp"/>
           <include name="selectRegularFlights"/>
+          <include name="validatePageTitle"/>
+          <include name="validatePassengersSectionIsDisabled"/>
           <include name="validateFlightDetails"/>
         </methods>
       </class> <!-- com.ryanair.tests.HomePageTest -->

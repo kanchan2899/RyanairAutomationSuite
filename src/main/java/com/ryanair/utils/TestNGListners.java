@@ -4,12 +4,10 @@ import com.ryanair.base.BaseClass;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 
 public class TestNGListners extends BaseClass implements ITestListener {
 
@@ -18,7 +16,7 @@ public class TestNGListners extends BaseClass implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult tr) {
-        log("Test Started....");
+        log("*******************Test Started***************");
     }
 
     @Override
@@ -28,15 +26,11 @@ public class TestNGListners extends BaseClass implements ITestListener {
 
         status = "Passed";
 
-        // This will print the class name in which the method is present
         log(tr.getTestClass());
 
-        // This will print the priority of the method.
-        // If the priority is not defined it will print the default priority as
-        // 'o'
         log("Priority of this method is " + tr.getMethod().getPriority());
 
-        System.out.println(".....");
+        System.out.println("\n\n");
     }
 
     @Override
@@ -72,7 +66,7 @@ public class TestNGListners extends BaseClass implements ITestListener {
             File destFile = new File(filePath+methodName+ "_" + CommonUtilities.currentDate() + ".png");
             FileUtils.copyFile(scrFile, destFile);
             Reporter.log("<br><img src='"+destFile+"' height='300' width='300'/><br>");
-            System.out.println("***Placed screen shot in "+filePath+" ***");
+            System.out.println("*********Placed screen shot in "+filePath+" **********");
         } catch (IOException e) {
             e.printStackTrace();
         }

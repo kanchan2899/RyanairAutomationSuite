@@ -25,10 +25,10 @@ public class OverviewPage extends OverviewPageElements {
 
     public FlightsPage selectFlightsPage(){
         try {
-            nav_flights.click();
+            driverUtility.click(nav_flights);
         } catch (StaleElementReferenceException e){
             if(nav_flights.isDisplayed()){
-                nav_flights.click();
+                driverUtility.click(nav_flights);
             }
         }
         return new FlightsPage();

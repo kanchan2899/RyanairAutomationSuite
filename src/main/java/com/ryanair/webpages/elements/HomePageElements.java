@@ -18,7 +18,7 @@ public class HomePageElements {
     @FindBy(xpath = "//hp-airports-list/div[2]/div/hp-airport-item")
     public WebElement destination_airport;
 
-    @FindBy(xpath = "//ry-tooltip//div[contains(@data-id, '2020-07-07')]")
+    @FindBy(xpath = "//div[@data-id='2020-07-07']")
     public WebElement departure_date;
 
     @FindBy(xpath = "//div[@data-ref='input-button__dates-from']/div[2]")
@@ -45,5 +45,7 @@ public class HomePageElements {
     @FindBy(xpath ="//button[contains(@class, 'flight-search-widget__start-search')]")
     public WebElement search_button;
 
+    @FindBy(className = "cookie-popup__close")
+    public WebElement cookie_popup;
 
 }

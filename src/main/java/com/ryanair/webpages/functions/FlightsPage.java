@@ -32,7 +32,7 @@ public class FlightsPage extends FlightsPageElements {
 
     public void selectInboundRegularFlight() {
         BaseClass.driver.navigate().refresh();
-        driverUtility.clickOnElementUsingJS(inboundFlight);
+        driverUtility.click(inboundFlight);
     }
 
     public void selectOutboundRegularFlight(){

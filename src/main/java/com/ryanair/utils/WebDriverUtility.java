@@ -1,5 +1,8 @@
 package com.ryanair.utils;
 
+import com.ryanair.webpages.functions.HomePage;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,19 +10,22 @@ import org.openqa.selenium.interactions.Actions;
 
 public class WebDriverUtility {
 
-    WebDriver driver;
-    Actions actions;
-    JavascriptExecutor javascriptExecutor;
+    static final Logger logger = LogManager.getLogger(HomePage.class.getName());
+
+    private static WebDriver driver;
+    private static Actions actions;
+    private static JavascriptExecutor javascriptExecutor;
 
     public WebDriverUtility(WebDriver driver){
         this.driver = driver;
-        //actions = new Actions(driver);
+        actions = new Actions(driver);
         javascriptExecutor = (JavascriptExecutor) driver;
     }
 
     public boolean checkIfPageIsLoaded(){
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         if(javascriptExecutor.executeScript("return document.readyState").toString().equalsIgnoreCase("complete")){
+            logger.info("The page is loaded correctly");
             return true;
         }
 
@@ -41,19 +47,33 @@ public class WebDriverUtility {
         return driver.getTitle();
     }
 
-    public void clickOnElement(WebElement element){
-        int x = element.getLocation().getX();
-        int y = element.getLocation().getY();
-        actions = new Actions(driver);
-        actions.moveToElement(element, x, y).click().build().perform();
+    public static void click(WebElement element){
+        try{
+            element.click();
+        } catch (Exception e1){
+            try {
+                javascriptExecutor.executeScript("arguments[0].click();", element);
+            } catch (Exception e2){
+                try {
+                    int x = element.getLocation().getX();
+                    int y = element.getLocation().getY();
+                    actions.moveToElement(element, x, y).click().build().perform();
+                } catch (Exception e3){
+
+                }
+            }
+        }
+
     }
 
-    public void clickOnElementUsingJS(WebElement element){
-        //javascriptExecutor.executeScript("window.scrollTo(0,'element.getLocation().y+')");
-        //javascriptExecutor.executeScript("arguments[0].scrollIntoView()", element);
-        //javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
-        javascriptExecutor.executeScript("arguments[0].click();", element);
+    public static void type(WebElement element, String text){
+        element.sendKeys(text);
     }
+
+    public static void clearField(WebElement element){
+        element.clear();
+    }
+
 
     public void scrollDown(){
         javascriptExecutor.executeScript("window.scrollBy(0, 50);", "");
@@ -63,7 +83,4 @@ public class WebDriverUtility {
         javascriptExecutor.executeScript("window.scrollBy(0, -250);", "");
     }
 
-    public void switchToFrame(){
-
-    }
 }

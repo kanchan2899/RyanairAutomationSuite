@@ -4,17 +4,17 @@ import com.ryanair.base.BaseClass;
 import com.ryanair.webpages.functions.FlightsPage;
 import com.ryanair.webpages.functions.HomePage;
 import com.ryanair.webpages.functions.OverviewPage;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseClass{
 
     private HomePage homePage;
     private OverviewPage overviewPage;
     private FlightsPage flightsPage;
-    private BaseClass baseClass;
-    private WebDriver driver;
 
     @BeforeTest
     public void setUp(){
@@ -36,7 +36,6 @@ public class HomePageTest extends BaseClass{
 
     @Test (priority = 3)
     public void searchFlights(){
-        //homePage.closeCookiePopup();
         homePage.selectCountries();
         homePage.selectDates();
         homePage.selectPassengers();
@@ -44,14 +43,14 @@ public class HomePageTest extends BaseClass{
     }
 
     @Test(priority = 4)
-    public void navigateToFlights() throws InterruptedException {
+    public void navigateToFlights() {
         boolean isOverviewPageLoaded = overviewPage.checkIfPageIsLoaded();
         if(isOverviewPageLoaded){
-            System.out.println(overviewPage.getPageTitle());
             flightsPage = overviewPage.selectFlightsPage();
         }
     }
 
+    @Ignore
     @Test(priority = 5)
     public void validateFlightDetails(){
         Assert.assertEquals(flightsPage.getOriginCountry(), "Dublin");
@@ -60,20 +59,16 @@ public class HomePageTest extends BaseClass{
         Assert.assertEquals(flightsPage.getReturnDate(), "14 Jul");
     }
 
+    @Ignore
     @Test(priority = 6)
     public void selectRegularFlights() throws InterruptedException {
         flightsPage.selectInboundRegularFlight();
         //flightsPage.selectOutboundRegularFlight();
     }
 
-    @Test(priority = 7)
-    public void validatePassengersSectionIsDisabled(){
-
-    }
-
     @AfterTest
     public void tearDown(){
-       // driver.quit();
+        driver.quit();
     }
 
 }

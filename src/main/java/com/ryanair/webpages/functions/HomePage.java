@@ -35,12 +35,13 @@ public class HomePage extends HomePageElements {
     }
 
     public void selectCountries(){
-        flights_tab.click();
-        origin_country.clear();
-        origin_country.sendKeys(jsonReader.readValue("origin_country"));
-        destination_country.clear();
-        destination_country.sendKeys(jsonReader.readValue("destination_country"));
-        destination_airport.click();
+        driverUtility.click(cookie_popup);
+        driverUtility.click(flights_tab);
+        driverUtility.clearField(origin_country);
+        driverUtility.type(origin_country, jsonReader.readValue("origin_country"));
+        driverUtility.clearField(destination_country);
+        driverUtility.type(destination_country, jsonReader.readValue("destination_country"));
+        driverUtility.click(destination_airport);
     }
 
     public void selectDates() {
@@ -57,9 +58,5 @@ public class HomePage extends HomePageElements {
     public OverviewPage clickSearchButton(){
         search_button.click();
         return new OverviewPage();
-    }
-
-    public void closeCookiePopup() {
-
     }
 }

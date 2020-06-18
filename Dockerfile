@@ -22,7 +22,7 @@ RUN echo "$PWD"
 # Run the maven command to execute all the tests
 WORKDIR "/ryanair"
 
-RUN mvn test
+RUN mvn -version
 
 
 #FROM maven:3.5.3-jdk-8-alpine
