@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Ryanair Automation Suite]">
-  <listeners>
-    <listener class-name="com.ryanair.utils.TestNGListners"/>
-  </listeners>
-  <test thread-count="5" name="FlightsBooking(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="RyanairAutomationSuite(failed)">
     <classes>
       <class name="com.ryanair.tests.HomePageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="navigateToFlights"/>
           <include name="setUp"/>
+          <include name="selectRegularFlights"/>
           <include name="validateFlightDetails"/>
         </methods>
       </class> <!-- com.ryanair.tests.HomePageTest -->
     </classes>
-  </test> <!-- FlightsBooking(failed) -->
-</suite> <!-- Failed suite [Ryanair Automation Suite] -->
+  </test> <!-- RyanairAutomationSuite(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

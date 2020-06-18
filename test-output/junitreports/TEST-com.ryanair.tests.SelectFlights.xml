@@ -11,7 +11,7 @@ Driver info: org.openqa.selenium.remote.RemoteWebDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /tmp/.com.google.Chrome.n3Dai5}, goog:chromeOptions: {debuggerAddress: localhost:38157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 74f28f5c69a51365b15e1190e2d...}
 Session ID: 74f28f5c69a51365b15e1190e2dd7f20
 *** Element info: {Using=xpath, value=//a[@data-ref=&#039;secondary-navigation-section-getting-there&#039;]}">
-      <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-ref='secondary-navigation-section-getting-there']"}
+        <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-ref='secondary-navigation-section-getting-there']"}
   (Session info: chrome=83.0.4103.61)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
@@ -36,7 +36,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy8.click(Unknown Source)
-at com.ryanair.webpages.OverviewPage.selectFlightsPage(OverviewPage.java:30)
+at com.ryanair.webpages.functions.OverviewPage.selectFlightsPage(OverviewPage.java:30)
 at com.ryanair.tests.SelectFlights.SelectFlightsWithNoLogin(SelectFlights.java:34)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

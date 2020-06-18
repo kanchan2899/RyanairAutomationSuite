@@ -6,7 +6,9 @@
       <class name="com.ryanair.tests.HomePageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="navigateToFlights"/>
           <include name="setUp"/>
+          <include name="selectRegularFlights"/>
           <include name="validateFlightDetails"/>
         </methods>
       </class> <!-- com.ryanair.tests.HomePageTest -->

@@ -13,7 +13,7 @@ public class WebDriverUtility {
 
     public WebDriverUtility(WebDriver driver){
         this.driver = driver;
-        actions = new Actions(driver);
+        //actions = new Actions(driver);
         javascriptExecutor = (JavascriptExecutor) driver;
     }
 

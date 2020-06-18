@@ -1,21 +1,20 @@
 package com.ryanair.tests;
 
 import com.ryanair.base.BaseClass;
-import com.ryanair.webpages.FlightsPage;
-import com.ryanair.webpages.HomePage;
-import com.ryanair.webpages.OverviewPage;
+import com.ryanair.webpages.functions.FlightsPage;
+import com.ryanair.webpages.functions.HomePage;
+import com.ryanair.webpages.functions.OverviewPage;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class HomePageTest extends BaseClass {
+public class HomePageTest extends BaseClass{
 
     private HomePage homePage;
     private OverviewPage overviewPage;
     private FlightsPage flightsPage;
-
-    public HomePageTest(){
-        super();
-    }
+    private BaseClass baseClass;
+    private WebDriver driver;
 
     @BeforeTest
     public void setUp(){
@@ -37,6 +36,7 @@ public class HomePageTest extends BaseClass {
 
     @Test (priority = 3)
     public void searchFlights(){
+        //homePage.closeCookiePopup();
         homePage.selectCountries();
         homePage.selectDates();
         homePage.selectPassengers();

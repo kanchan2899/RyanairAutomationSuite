@@ -8,9 +8,10 @@
     <classes>
       <class name="com.ryanair.tests.HomePageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="searchFlights"/>
+          <include name="validateHomePageIsLoaded"/>
           <include name="setUp"/>
-          <include name="validateFlightDetails"/>
+          <include name="validatePageTitle"/>
         </methods>
       </class> <!-- com.ryanair.tests.HomePageTest -->
     </classes>
