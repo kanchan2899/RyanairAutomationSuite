@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Ryanair Automation Suite" verbose="1" >
+    <test name="FlightsBooking" >
+        <classes>
+            <class name="com.ryanair.tests.HomePageTest" />
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.ryanair.utils.TestNGListners"/>
+    </listeners>
+</suite>

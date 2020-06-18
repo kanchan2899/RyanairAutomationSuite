@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Ryanair Automation Suite" duration-ms="30763" started-at="2020-06-18T09:22:49 IST" finished-at="2020-06-18T09:23:19 IST">
+    <groups>
+    </groups>
+    <test name="FlightsBooking" duration-ms="30763" started-at="2020-06-18T09:22:49 IST" finished-at="2020-06-18T09:23:19 IST">
+      <class name="com.ryanair.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="setUp" is-config="true" duration-ms="11478" started-at="2020-06-18T09:22:49 IST" finished-at="2020-06-18T09:23:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateHomePageIsLoaded()[pri:1, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="validateHomePageIsLoaded" duration-ms="277" started-at="2020-06-18T09:23:00 IST" finished-at="2020-06-18T09:23:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHomePageIsLoaded -->
+        <test-method status="PASS" signature="validatePageTitle()[pri:2, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="validatePageTitle" duration-ms="150" started-at="2020-06-18T09:23:00 IST" finished-at="2020-06-18T09:23:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePageTitle -->
+        <test-method status="PASS" signature="searchFlights()[pri:3, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="searchFlights" duration-ms="3824" started-at="2020-06-18T09:23:00 IST" finished-at="2020-06-18T09:23:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchFlights -->
+        <test-method status="PASS" signature="navigateToFlights()[pri:4, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="navigateToFlights" duration-ms="7445" started-at="2020-06-18T09:23:04 IST" finished-at="2020-06-18T09:23:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToFlights -->
+        <test-method status="PASS" signature="validateFlightDetails()[pri:5, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="validateFlightDetails" duration-ms="4219" started-at="2020-06-18T09:23:12 IST" finished-at="2020-06-18T09:23:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFlightDetails -->
+        <test-method status="PASS" signature="selectRegularFlights()[pri:6, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="selectRegularFlights" duration-ms="3316" started-at="2020-06-18T09:23:16 IST" finished-at="2020-06-18T09:23:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectRegularFlights -->
+        <test-method status="PASS" signature="validatePassengersSectionIsDisabled()[pri:7, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="validatePassengersSectionIsDisabled" duration-ms="0" started-at="2020-06-18T09:23:19 IST" finished-at="2020-06-18T09:23:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePassengersSectionIsDisabled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ryanair.tests.HomePageTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-06-18T09:23:19 IST" finished-at="2020-06-18T09:23:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ryanair.tests.HomePageTest -->
+    </test> <!-- FlightsBooking -->
+  </suite> <!-- Ryanair Automation Suite -->
+</testng-results>
