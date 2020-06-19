@@ -49,6 +49,7 @@ public class FlightsBookingTest extends BaseClass{
         flightsPage = overviewPage.selectFlightsPage();
     }
 
+    @Ignore
     @Test(priority = 5)
     public void validateFlightDetails(){
         Assert.assertEquals(flightsPage.getOriginCountry(), propUtils.getProperty("origin_country"));
