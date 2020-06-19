@@ -3,7 +3,7 @@
 <suite name="Ryanair Automation Suite" verbose="1" >
     <test name="FlightsBooking" >
         <classes>
-            <class name="com.ryanair.tests.HomePageTest" />
+            <class name="com.ryanair.tests.FlightsBookingTest" />
         </classes>
     </test>
 

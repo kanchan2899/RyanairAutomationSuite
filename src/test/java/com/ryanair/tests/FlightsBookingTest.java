@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-public class HomePageTest extends BaseClass{
+public class FlightsBookingTest extends BaseClass{
 
     private HomePage homePage;
     private OverviewPage overviewPage;
