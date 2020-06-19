@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * This class reads the application properties files.
+ */
 public class PropUtils {
 
     public static Properties properties;

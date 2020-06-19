@@ -29,7 +29,7 @@ public class FlightsBookingTest extends BaseClass{
     }
 
     @Test (priority = 2)
-    public void validatePageTitle(){
+    public void validateHomePageTitle(){
         String pageTitle = homePage.getPageTitle();
         Assert.assertEquals(pageTitle, "Official Ryanair website | Cheap flights from Ireland | Ryanair");
     }
@@ -45,30 +45,28 @@ public class FlightsBookingTest extends BaseClass{
     @Test(priority = 4)
     public void navigateToFlights() {
         boolean isOverviewPageLoaded = overviewPage.checkIfPageIsLoaded();
-        if(isOverviewPageLoaded){
-            flightsPage = overviewPage.selectFlightsPage();
-        }
+        Assert.assertTrue(isOverviewPageLoaded);
+        flightsPage = overviewPage.selectFlightsPage();
     }
 
-    @Ignore
     @Test(priority = 5)
     public void validateFlightDetails(){
-        Assert.assertEquals(flightsPage.getOriginCountry(), "Dublin");
-        Assert.assertEquals(flightsPage.getDestinationCountry(), "Barcelona");
+        Assert.assertEquals(flightsPage.getOriginCountry(), propUtils.getProperty("origin_country"));
+        Assert.assertEquals(flightsPage.getDestinationCountry(), propUtils.getProperty("destination_country"));
         Assert.assertEquals(flightsPage.getDepartureDate(), "07 Jul");
         Assert.assertEquals(flightsPage.getReturnDate(), "14 Jul");
     }
 
     @Ignore
     @Test(priority = 6)
-    public void selectRegularFlights() throws InterruptedException {
+    public void selectRegularFlights() {
         flightsPage.selectInboundRegularFlight();
         //flightsPage.selectOutboundRegularFlight();
     }
 
     @AfterTest
     public void tearDown(){
-        driver.quit();
+        closeBrowser();
     }
 
 }

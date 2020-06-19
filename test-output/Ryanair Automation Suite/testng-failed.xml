@@ -6,14 +6,13 @@
   </listeners>
   <test thread-count="5" name="FlightsBooking(failed)">
     <classes>
-      <class name="com.ryanair.tests.HomePageTest">
+      <class name="com.ryanair.tests.FlightsBookingTest">
         <methods>
-          <include name="searchFlights"/>
-          <include name="validateHomePageIsLoaded"/>
           <include name="setUp"/>
-          <include name="validatePageTitle"/>
+          <include name="validateFlightDetails"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ryanair.tests.HomePageTest -->
+      </class> <!-- com.ryanair.tests.FlightsBookingTest -->
     </classes>
   </test> <!-- FlightsBooking(failed) -->
 </suite> <!-- Failed suite [Ryanair Automation Suite] -->

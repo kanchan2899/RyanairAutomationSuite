@@ -3,19 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
   <test thread-count="5" name="RyanairAutomationSuite(failed)">
     <classes>
-      <class name="com.ryanair.tests.HomePageTest">
+      <class name="com.ryanair.tests.FlightsBookingTest">
         <methods>
-          <include name="searchFlights"/>
-          <include name="tearDown"/>
-          <include name="validateHomePageIsLoaded"/>
-          <include name="navigateToFlights"/>
           <include name="setUp"/>
-          <include name="selectRegularFlights"/>
-          <include name="validatePageTitle"/>
-          <include name="validatePassengersSectionIsDisabled"/>
           <include name="validateFlightDetails"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ryanair.tests.HomePageTest -->
+      </class> <!-- com.ryanair.tests.FlightsBookingTest -->
     </classes>
   </test> <!-- RyanairAutomationSuite(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

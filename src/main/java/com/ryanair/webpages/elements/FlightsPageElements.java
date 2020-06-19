@@ -3,6 +3,9 @@ package com.ryanair.webpages.elements;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * This page contains the webelements on the flight page
+ */
 public class FlightsPageElements {
 
     @FindBy(xpath = "//div[contains(@class, 'details__header')]/h4[1]")

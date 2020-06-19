@@ -21,7 +21,7 @@ public class BaseClass {
     public static WebDriver driver;
     private static String browser;
     private static String baseUrl;
-    private PropUtils propUtils;
+    public PropUtils propUtils;
 
     public BaseClass(){
         propUtils = new PropUtils();
@@ -83,5 +83,12 @@ public class BaseClass {
         return driver;
     }
 
+    public static void closeBrowser(){
+        try{
+            driver.close();
+        } catch (Exception e){
+            driver.quit();
+        }
+    }
 
 }

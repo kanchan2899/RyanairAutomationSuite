@@ -3,6 +3,10 @@ package com.ryanair.webpages.elements;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * This page contains the webelements on the overview page.
+ */
+
 public class OverviewPageElements {
 
     @FindBy(xpath = "//a[@data-ref='secondary-navigation-section-trip-overview']")

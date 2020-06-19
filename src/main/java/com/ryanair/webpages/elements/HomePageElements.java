@@ -4,6 +4,11 @@ import com.ryanair.base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * This page contains the webelements on the home page
+ */
+
+
 public class HomePageElements {
 
     @FindBy(xpath = "//button[contains(@data-ref, 'search-widget-tabs__flights')]")
